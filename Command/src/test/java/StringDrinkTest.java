@@ -4,10 +4,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class StringDrinkTest extends StringDrink {
-    public StringDrinkTest(String s) {
-        super(s);
-    }
+public class StringDrinkTest {
+
     @Test
     public void stringDrink() {
         StringDrink drink = new StringDrink("ABCD");

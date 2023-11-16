@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StringReplacerTest extends StringReplacer {
+public class StringReplacerTest {
+
     @Test
     public void stringReplacer() {
         StringDrink drink = new StringDrink("ABCDABCD");

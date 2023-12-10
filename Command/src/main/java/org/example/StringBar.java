@@ -3,13 +3,12 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StringBar extends Bar{
-    private boolean happyHour=false;
+public class StringBar extends Bar {
 
-    public StringBar() {
-        super();
+    private boolean happyHour;
+    public StringBar(){
+        this.happyHour = false;
     }
-
     @Override
     public boolean isHappyHour() {
         return happyHour;
@@ -17,13 +16,22 @@ public class StringBar extends Bar{
 
     @Override
     public void startHappyHour() {
-        happyHour = true;
-        notifyObservers();
+        if (!isHappyHour()) {
+            this.happyHour = true;
+            notifyObservers();
+        }
     }
 
     @Override
     public void endHappyHour() {
-        happyHour = false;
-        notifyObservers();
+        if(isHappyHour()) {
+            this.happyHour = false;
+            notifyObservers();
+        }
     }
+
+    public void order(StringDrink drink,StringRecipe recipe){
+        recipe.mix(drink);
+    }
+
 }
